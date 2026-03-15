@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 40 20% 92%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 40 85% 55%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 40 20% 85%;
+
+    --muted: 220 15% 13%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 40 85% 55%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 40 85% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 40 85% 55%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 40 85% 55%;
+
+    --gold-glow: 40 90% 60%;
+    --gold-dim: 40 60% 35%;
+    --surface-glass: 220 20% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(40 90% 60%), hsl(40 85% 55%), hsl(35 80% 45%));
+  }
+
+  .bg-gradient-gold {
+    background-image: linear-gradient(135deg, hsl(40 90% 60%), hsl(40 85% 55%));
+  }
+
+  .bg-glass {
+    background: hsl(220 20% 8% / 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(220 15% 18% / 0.5);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 0 40px -10px hsl(40 85% 55% / 0.3);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      hsl(220 20% 6% / 0.95) 0%,
+      hsl(220 20% 6% / 0.7) 50%,
+      hsl(220 20% 6% / 0.3) 100%
+    );
+  }
+}

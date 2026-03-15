@@ -1,0 +1,15 @@
+Perfeito. Fluxo padrão (3 comandos) para subir alterações:
+
+git add .
+git commit -m "descreva aqui o que mudou"
+git push origin main
+Para atualizar seu projeto local antes de começar:
+
+git pull origin main
+Checklist rápido:
+
+git status para ver o que mudou.
+git add . para preparar tudo.
+git commit -m "mensagem" para criar o commit.
+git push origin main para enviar ao GitHub.
+
